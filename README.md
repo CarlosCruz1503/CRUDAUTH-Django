@@ -1,12 +1,13 @@
 # Agenda de contactos y control de tareas
 
-Este proyecto es una app de DJANGO, esta app es completamente funcional
-ya que aunque no tiene lenguaje de front, si tiene templates en HTML,
-ademas tiene un sistema de autenticación simple, 
+Este proyecto es una app de DJANGO, 
 esta app es para control de tareas y registro de contactos,
 este sistema esta inspirado en google Calendar y la agenda de contactos de los celulares
 las tareas y contactos pueden ser manipuladas con todas las acciones CRUD 
 por medio de metodos http (GET/POST/PUT/DELETE)
+
+ademas tiene un sistema de autenticación simple, 
+
 ademas de poder filtar busqueda de tareas y contactos por medio de querys
 
 se pueden hacer las siguientes acciones:
