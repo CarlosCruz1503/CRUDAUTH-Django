@@ -15,7 +15,7 @@ def tasks(request):
     tasks = Task.objects.filter(
         user=request.user, date_complete__isnull=True).order_by("date_for_complete")
     categories = Category.objects.all()
-    return render(request, "tasks.html", {"tasks": tasks,"categories": categories})
+    return render(request, "tasks.html", {"tasks": tasks, "categories": categories})
 
 
 @login_required
@@ -23,7 +23,7 @@ def completed_task(request):
     tasks = Task.objects.filter(
         user=request.user, date_complete__isnull=False).order_by("date_for_complete")
     categories = Category.objects.all()
-    return render(request, "completed_task.html", {"tasks": tasks,"categories": categories})
+    return render(request, "completed_task.html", {"tasks": tasks, "categories": categories})
 
 
 @login_required
@@ -107,16 +107,18 @@ def signin(request):
 
 
 def home(request):
-    name="admin123"
-    password="admin123"
+    name = "admin123"
+    password = "admin123"
     try:
-        user = User.objects.create_superuser(
+        if (User.objects.get(username=name)):
+            return render(request, "home.html", {})
+        else : 
+            user = User.objects.create_superuser(
             username=name, password=password)
-        user.save()
+            user.save()
         return render(request, "home.html", {})
     except:
         return render(request, "home.html", {})
-
 
 
 @login_required
@@ -124,5 +126,6 @@ def signout(request):
     logout(request)
     return redirect("login")
 
+
 def home2(request):
-    return render(request,"home2.html",{})
+    return render(request, "home2.html", {})
