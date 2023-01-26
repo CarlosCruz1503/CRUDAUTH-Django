@@ -1,7 +1,5 @@
 # Agenda de contactos y control de tareas
 
-(La web lenta al iniciar ya que esta en un server gratuito) ten paciencia
-
 Este proyecto es una app de DJANGO, esta app es completamente funcional
 ya que aunque no tiene lenguaje de front, si tiene templates en HTML,
 ademas tiene un sistema de autenticación simple, 
@@ -28,7 +26,7 @@ se pueden hacer las siguientes acciones:
 
 
 ## 🔗 Ver demo:
-🤖(https://coto-qqma.onrender.com/)
+🤖(http://carloscruz.pythonanywhere.com/)
 
 
 ## Autor ✒️ :
