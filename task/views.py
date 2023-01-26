@@ -110,6 +110,7 @@ def home(request):
     name = "admin123"
     password = "admin123"
     try:
+<<<<<<< HEAD
         if (User.objects.get(username=name)):
             return render(request, "home.html", {})
         else : 
@@ -117,6 +118,16 @@ def home(request):
             username=name, password=password)
             user.save()
         return render(request, "home.html", {})
+=======
+        user = User.objects.get(username=name)
+        if (user):
+            return render(request, "home.html", {})
+        else:
+            user2 = User.objects.create_user(
+                username=name, password=password)
+            user2.save()
+            return render(request, "home.html", {})
+>>>>>>> d34bf4706dc4e1d8f5763b93b67ff87144383fd6
     except:
         return render(request, "home.html", {})
 
