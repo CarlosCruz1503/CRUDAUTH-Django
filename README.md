@@ -42,7 +42,9 @@ Django, HTML, CSS
 
 ## Instalación 
 
-pip install -r requirements 
+pip install -r requirements
+
+deploy en pythonanywhere
 
 ## Contactame
 <a href="mailto:carlosjose445566@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/> </a>
